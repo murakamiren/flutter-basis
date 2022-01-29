@@ -32,7 +32,7 @@
 /build/
 
 # Web related
-/web
+web/
 lib/generated_plugin_registrant.dart
 
 # Symbolication related
