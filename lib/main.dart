@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/TestPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -62,8 +63,13 @@ class _MyHomePageState extends State<MyHomePage> {
             Text("hello world"),
             Text("$_counter"),
             TextButton(
-                onPressed: () => {print("button was tapped")},
-                child: Text("tap me")),
+                onPressed: () => {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return TestPage();
+                      }))
+                    },
+                child: Text("go to page 1")),
             Text(
               _type,
               style: TextStyle(fontSize: 24, color: Colors.red),
