@@ -4,6 +4,7 @@ import 'package:my_first_flutter/TestPage2.dart';
 class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _pagenateText = "Tap to next page!";
     return Scaffold(
       appBar: AppBar(
         title: Text("Page 1"),
@@ -17,7 +18,7 @@ class TestPage extends StatelessWidget {
                   }))
                 },
             child: Text(
-              "next page",
+              _pagenateText,
               style: TextStyle(fontSize: 32),
             )),
       ),

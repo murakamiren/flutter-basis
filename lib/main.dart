@@ -33,6 +33,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   String _type = "Even";
+  final _drawerWord = "This is Drawer";
+  final _firstWord = "Hello World!";
 
   void _incrementCounter() {
     setState(() {
@@ -55,12 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         drawer: Drawer(
           child: Center(
-            child: Text("Drawer"),
+            child: Text(_drawerWord),
           ),
         ),
         body: Column(
           children: [
-            Text("hello world"),
+            Text(_firstWord),
             Text("$_counter"),
             TextButton(
                 onPressed: () => {
@@ -76,6 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Icon(
                   Icons.favorite,
@@ -94,6 +97,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            Text(
+              "foo",
+              style: TextStyle(
+                fontSize: 64,
+              ),
+            )
           ],
         ),
         floatingActionButton: FloatingActionButton(
